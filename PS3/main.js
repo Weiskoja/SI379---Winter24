@@ -48,14 +48,14 @@ const um_events = () => {getUMEventsWithImages((event_array) =>{
                 // console.log(event_array);
                  setSelectedIndex(event_array, ((sel_index+1)%event_array.length));
                  sel_index++;
-             }, 3000);         
+             }, 10000);         
         });
     };
     um_timer = setInterval(() => {
        // console.log(event_array);
         setSelectedIndex(event_array, ((sel_index+1)%event_array.length));
         sel_index++;
-    }, 3000);
+    }, 10000);
     
     });
     }

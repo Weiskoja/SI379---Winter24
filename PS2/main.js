@@ -55,7 +55,6 @@ function displayGuessFeedback(guess){
 document.body.addEventListener('keydown', (ev) =>{
     //1. When the user presses the 'Enter' key, the event listener should:
     if(ev.key === 'Enter'){
-        console.log('entergood')
         //1.a. Get the value of the input element (which is the guess)
         const guess = inputEl.value;
         //1.b. If the guess is not the correct length (WORD_LENGTH), use showInfoMessage to display: "Your guess must be {WORD_LENGTH} letters long." (where {WORD_LENGTH} is the value of WORD_LENGTH)

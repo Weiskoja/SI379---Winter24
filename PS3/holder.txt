@@ -1,0 +1,58 @@
+  event_array.forEach(element => {
+        const img_el = document.createElement("img");
+        const url = element.styled_images.event_thumb;
+        //console.log(url)
+        img_el.src = url;
+        img_el.addEventListener('click', () => {
+            img_el.classList.toggle('selected');
+            sel_img.src = url;
+            sel_title.textContent = img_el.event_title;
+            //sel_date.textContent = getReadableTime(img_el.datetime_start);
+            sel_location.textContent = img_el.location;
+            sel_description.textContent = img_el.description;
+        });
+        list_el.append(img_el);
+    });
+
+    getUMEventsWithImages((event_array) =>{
+    event_array.forEach(element => {
+        const img_el = document.createElement("img");
+        const url = element.styled_images.event_thumb;
+        //console.log(url)
+        img_el.src = url;
+        img_el.addEventListener('click', () => {
+            img_el.classList.toggle('selected');
+            sel_img.src = url;
+            sel_title.textContent = img_el.event_title;
+            //sel_date.textContent = getReadableTime(img_el.datetime_start);
+            sel_location.textContent = img_el.location;
+            sel_description.textContent = img_el.description;
+        });
+        list_el.append(img_el);
+    });
+    }
+)
+
+img_el.addEventListener('click', () => {
+            img_el.classList.toggle('selected');
+            sel_img.src = url;
+            sel_title.textContent = img_el.event_title;
+            //sel_date.textContent = getReadableTime(img_el.datetime_start);
+            sel_location.textContent = img_el.location;
+            sel_description.textContent = img_el.description;
+        });
+        event_array.forEach((ev) =>{
+        //console.log(ev.styled_images.event_thumb);
+        const img_el = document.createElement("img");
+        const url = ev.styled_images.event_thumb;
+        img_el.src = url;
+        img_el.setAttribute('idx', idx);
+        //console.log(idx);
+        list_el.append(img_el);
+        img_el.addEventListener('click', () => {
+            sel_index = false;
+            img_el.classList.toggle('selected');
+            console.log(img_el.getAttribute('idx'));
+            //setSelectedIndex(idx);
+        });
+        idx++;
